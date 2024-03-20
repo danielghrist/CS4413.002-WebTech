@@ -1,0 +1,12 @@
+/* CSS Styling */
+
+.container {
+  /* margin: 0px auto; */
+  margin-top: 40px;
+  width: 35%;
+}
+
+.centered {
+  text-align: center;
+  margin-bottom: 40px;
+}
