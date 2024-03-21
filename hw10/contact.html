@@ -59,18 +59,58 @@
       <div class="row">
 
         <div class="col-md-6 col-sm-12">
-          <form id="contact-form" role="form" action="" method="post">
+          <form class="form-horizontal" id="contact-form" role="form" action="" method="post">
             <div class="section-title">
               <h2>Contact Me <small>we love conversations. let us talk!</small></h2>
             </div>
-
-            <div class="col-md-12 col-sm-12">
-              <input type="text" class="form-control" placeholder="Enter full name" name="name" required="">
-
-              <input type="email" class="form-control" placeholder="Enter email address" name="email" required="">
-
+            <div class="col-md-12 col-sm-12 has-feedback" id="fname-div">
+              <label class="control-label" for="firstname">First name:</label>
+              <input type="text" class="form-control" name="firstname" id="firstname"
+                placeholder="Please enter your first name" required>
+              <span id="fn-icon" class="input-lg glyphicon form-control-feedback" aria-hidden="true"></span>
+              <span id="fn-feedback" class="help-block"></span>
+            </div>
+            <div class="col-md-12 col-sm-12 has-feedback" id="lname-div">
+              <label class="control-label" for="lastname">Last Name:</label>
+              <input type="text" class="form-control" name="lastname" id="lastname"
+                placeholder="Please enter your last name" required>
+              <span id="ln-icon" class="input-lg glyphicon form-control-feedback" aria-hidden="true"></span>
+              <span id="ln-feedback" class="help-block"></span>
+            </div>
+            <div class="col-md-12 col-sm-12 has-feedback" id="email-div">
+              <label class="control-label" for="email">Email:</label>
+              <input type="text" class="form-control" name="email" id="email" placeholder="Please enter your email"
+                required>
+              <span id="email-icon" class="input-lg glyphicon form-control-feedback" aria-hidden="true"></span>
+              <span id="email-feedback" class="help-block"></span>
+            </div>
+            <div class="col-md-12 col-sm-12 has-feedback" id="phone-div">
+              <label class="control-label" for="phone">Phone Number:</label>
+              <input type="text" class="form-control" name="phone" id="phone"
+                placeholder="Please enter your phone number" required>
+              <span id="phone-icon" class="input-lg glyphicon form-control-feedback" aria-hidden="true"></span>
+              <span id="phone-feedback" class="help-block"></span>
+            </div>
+            <div class="col-md-12 col-sm-12 has-feedback" id="username-div">
+              <label class="control-label" for="username">Username:</label>
+              <input type="text" class="form-control" name="username" id="username"
+                placeholder="Please enter your a username" required>
+              <span id="un-icon" class="input-lg glyphicon form-control-feedback" aria-hidden="true"></span>
+              <span id="un-feedback" class="help-block"></span>
+            </div>
+            <div class="col-md-12 col-sm-12 has-feedback" id="password-div">
+              <label class="control-label" for="password">Password:</label>
+              <input type="password" class="form-control" name="password" id="password"
+                placeholder="Please enter a password" required>
+              <span id="pw-icon" class="input-lg glyphicon form-control-feedback" aria-hidden="true"></span>
+              <span id="pw-feedback" class="help-block"></span>
+            </div>
+            <div class="col-md-12 col-sm-12" id="comments-div">
+              <label class="control-label" for="comments">Comments:</label>
               <textarea class="form-control" rows="6" placeholder="Tell us about your message" name="message"
-                required=""></textarea>
+                id="comments" required=""></textarea>
+              <span id="comments-icon" class="input-lg glyphicon form-control-feedback" aria-hidden="true"></span>
+              <span id="comments-feedback" class="help-block"></span>
             </div>
 
             <div class="col-md-4 col-sm-12">
@@ -95,6 +135,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <!-- BootStrap 3 Javascript -->
   <script src="assets/js/bootstrap.min.js"></script>
+  <script src="assets/js/event-attributes.js"></script>
 
 </body>
 
