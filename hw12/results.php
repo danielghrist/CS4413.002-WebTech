@@ -71,7 +71,7 @@
                 echo '<p>Password: '.$_GET['password'].'</p>';
                 echo '<p>Comments: '.$_GET['message'].'</p>';
             } else {
-                echo "Ah Ah Ah you sneaky mouse. You have to enter your data and submit the form to view this page.";
+                echo "<p>Ah Ah Ah you sneaky mouse. You have to enter your data and submit the form to view this page.</p>";
             }
             
         ?>
