@@ -62,13 +62,13 @@
         <div class="col-md-6 col-sm-12">
         <?php
             echo '<h2>Hello From Results</h2>';
-            echo '<p>'First Name: '.$_GET['firstname'].'</p>;
-            echo '<p>'Last Name: '.$_GET['lastname'].'</p>;
-            echo '<p>'Email: '.$_GET['email'].'</p>;
-            echo '<p>'Phone Number: '.$_GET['phone'].'</p>;
-            echo '<p>'Username: '.$_GET['username'].'</p>;
-            echo '<p>'Password: '.$_GET['password'].'</p>;
-            echo '<p>'Comments: '.$_GET['comments'].'</p>;
+            echo '<p>First Name: '.$_GET['firstname'].'</p>';
+            echo '<p>Last Name: '.$_GET['lastname'].'</p>';
+            echo '<p>Email: '.$_GET['email'].'</p>';
+            echo '<p>Phone Number: '.$_GET['phone'].'</p>';
+            echo '<p>Username: '.$_GET['username'].'</p>';
+            echo '<p>Password: '.$_GET['password'].'</p>';
+            echo '<p>Comments: '.$_GET['message'].'</p>';
         ?>
         </div>
 
