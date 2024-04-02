@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>💻 Welcome to Daniel Ghrist's (kda458) homepage! 💻</title>
+  <title>💻 Contact Daniel Ghrist's (kda458) 💻</title>
 
   <!-- BOOTSTRAP -->
   <link rel="stylesheet" href="assets/css/bootstrap.min.css">
@@ -66,7 +66,7 @@
         ?>
 
           <!-- If action attribute is left blank it will send the results back to itself. -->
-          <form class="form-horizontal" id="contact-form" role="form" action="" method="get">
+          <form class="form-horizontal" id="contact-form" role="form" action="" method="post">
             <div class="section-title">
               <h2>Contact Me <small>we love conversations. let us talk!</small></h2>
             </div>
