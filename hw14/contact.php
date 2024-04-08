@@ -176,7 +176,7 @@
               $errors .= 'messageNULL';
             }
             if ($errors != NULL) {
-              header('Location: contact.php?errMsg=$errors');
+              header('Location: contact.php?errMsg=' . $errors);
             } else {
               echo '<h2>Hello From Results</h2>';
               echo '<p>First Name: ' . $_POST['firstname'] . '</p>';
