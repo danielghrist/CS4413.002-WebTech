@@ -170,13 +170,13 @@
             $errors = '';
 
             // Clear out previous SESSION data:
-            // unset($_SESSION['firstname']);
-            // unset($_SESSION['lastname']);
-            // unset($_SESSION['email']);
-            // unset($_SESSION['phone']);
-            // unset($_SESSION['username']);
-            // unset($_SESSION['password']);
-            // unset($_SESSION['message']);
+            unset($_SESSION['firstname']);
+            unset($_SESSION['lastname']);
+            unset($_SESSION['email']);
+            unset($_SESSION['phone']);
+            unset($_SESSION['username']);
+            unset($_SESSION['password']);
+            unset($_SESSION['message']);
             $_SESSION['firstname'] = "";
             $_SESSION['lastname'] = "";
             $_SESSION['email'] = "";
