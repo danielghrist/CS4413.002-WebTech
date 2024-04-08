@@ -91,7 +91,7 @@
             //   echo '</div>';
             // } 
             else {
-              if (isset($_SESSION['firstname']) && $_SESSION['firstname'] != '') {
+              if (isset($_SESSION['firstname']) && $_SESSION['firstname'] != "") {
                 echo '<div class="col-md-12 col-sm-12 has-feedback has-success" id="fname-div">';
                 echo '<label class="control-label" for="firstname">First name:</label>';
                 echo '<input type="text" class="form-control" name="firstname" id="firstname" placeholder="Please enter your first name" value="' . $_SESSION['firstname'] . '">';
@@ -177,13 +177,13 @@
             // unset($_SESSION['username']);
             // unset($_SESSION['password']);
             // unset($_SESSION['message']);
-            $_SESSION['firstname'] = '';
-            $_SESSION['lastname'] = '';
-            $_SESSION['email'] = '';
-            $_SESSION['phone'] = '';
-            $_SESSION['username'] = '';
-            $_SESSION['password'] = '';
-            $_SESSION['message'] = '';
+            $_SESSION['firstname'] = "";
+            $_SESSION['lastname'] = "";
+            $_SESSION['email'] = "";
+            $_SESSION['phone'] = "";
+            $_SESSION['username'] = "";
+            $_SESSION['password'] = "";
+            $_SESSION['message'] = "";
 
             // Set variables from POST:
             $firstname = $_POST['firstname'];
