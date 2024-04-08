@@ -72,14 +72,14 @@
             if (isset($_GET['errMsg']) && strstr($_GET['errMsg'], 'firstNameNULL')) {
               echo '<div class="col-md-12 col-sm-12 has-feedback has-error" id="fname-div">';
               echo '<label class="control-label" for="firstname">First name:</label>';
-              echo '<input type="text" class="form-control" name="firstname" id="firstname" placeholder="Please enter your first name" required>';
+              echo '<input type="text" class="form-control" name="firstname" id="firstname" placeholder="Please enter your first name">';
               echo '<span id="fn-icon" class="input-lg glyphicon form-control-feedback" aria-hidden="true"></span>';
               echo '<span id="fn-feedback" class="help-block">First name cannot be blank!</span>';
               echo '</div>';
             } else {
               echo '<div class="col-md-12 col-sm-12 has-feedback" id="fname-div">';
               echo '<label class="control-label" for="firstname">First name:</label>';
-              echo '<input type="text" class="form-control" name="firstname" id="firstname" placeholder="Please enter your first name" required>';
+              echo '<input type="text" class="form-control" name="firstname" id="firstname" placeholder="Please enter your first name">';
               echo '<span id="fn-icon" class="input-lg glyphicon form-control-feedback" aria-hidden="true"></span>';
               echo '<span id="fn-feedback" class="help-block"></span>';
               echo '</div>';
@@ -88,14 +88,14 @@
             if (isset($_GET['errMsg']) && strstr($_GET['errMsg'], 'lastNameNULL')) {
               echo '<div class="col-md-12 col-sm-12 has-feedback has-error" id="lname-div">';
               echo '<label class="control-label" for="lastname">Last Name:</label>';
-              echo '<input type="text" class="form-control" name="lastname" id="lastname" placeholder="Please enter your last name" required>';
+              echo '<input type="text" class="form-control" name="lastname" id="lastname" placeholder="Please enter your last name">';
               echo '<span id="ln-icon" class="input-lg glyphicon form-control-feedback" aria-hidden="true"></span>';
               echo '<span id="ln-feedback" class="help-block">Last name cannot be blank!</span>';
               echo '</div>';
             } else {
               echo '<div class="col-md-12 col-sm-12 has-feedback" id="lname-div">';
               echo '<label class="control-label" for="lastname">Last Name:</label>';
-              echo '<input type="text" class="form-control" name="lastname" id="lastname" placeholder="Please enter your last name" required>';
+              echo '<input type="text" class="form-control" name="lastname" id="lastname" placeholder="Please enter your last name">';
               echo '<span id="ln-icon" class="input-lg glyphicon form-control-feedback" aria-hidden="true"></span>';
               echo '<span id="ln-feedback" class="help-block"></span>';
               echo '</div>';
