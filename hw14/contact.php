@@ -73,7 +73,7 @@
               echo '<div class="col-md-12 col-sm-12 has-feedback has-error" id="fname-div">';
               echo '<label class="control-label" for="firstname">First name:</label>';
               echo '<input type="text" class="form-control" name="firstname" id="firstname" placeholder="Please enter your first name">';
-              echo '<span id="fn-icon" class="input-lg glyphicon form-control-feedback" aria-hidden="true"></span>';
+              echo '<span id="fn-icon" class="input-lg glyphicon form-control-feedback glyphicon-remove" aria-hidden="true"></span>';
               echo '<span id="fn-feedback" class="help-block">First name cannot be blank!</span>';
               echo '</div>';
             } else {
