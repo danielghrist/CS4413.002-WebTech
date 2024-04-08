@@ -61,6 +61,7 @@
         <div class="col-md-6 col-sm-12">
 
           <?php
+          session_start();
           if (!isset($_POST['submit'])) {
 
             // If action attribute is left blank it will send the results back to itself.
@@ -69,20 +70,42 @@
             echo '<h2>Contact Me <small>we love conversations. let us talk!</small></h2>';
             echo '</div>';
 
-            if (isset($_GET['errMsg']) && strstr($_GET['errMsg'], 'firstNameNULL')) {
+            if (isset($_GET['errMsg'])) {
               echo '<div class="col-md-12 col-sm-12 has-feedback has-error" id="fname-div">';
               echo '<label class="control-label" for="firstname">First name:</label>';
               echo '<input type="text" class="form-control" name="firstname" id="firstname" placeholder="Please enter your first name">';
               echo '<span id="fn-icon" class="input-lg glyphicon form-control-feedback glyphicon-remove" aria-hidden="true"></span>';
-              echo '<span id="fn-feedback" class="help-block">First name cannot be blank!</span>';
+              if (strstr($_GET['errMsg'], 'firstNameNULL')) {
+                echo '<span id="fn-feedback" class="help-block">First name cannot be blank!</span>';
+              } elseif (strstr($_GET['errMsg'], 'firstNameInvalidChar')) {
+                echo '<span id="fn-feedback" class="help-block">Your First name must only be alphabetical chars and either a - or \'</span>';
+              }
               echo '</div>';
-            } else {
-              echo '<div class="col-md-12 col-sm-12 has-feedback" id="fname-div">';
-              echo '<label class="control-label" for="firstname">First name:</label>';
-              echo '<input type="text" class="form-control" name="firstname" id="firstname" placeholder="Please enter your first name">';
-              echo '<span id="fn-icon" class="input-lg glyphicon form-control-feedback" aria-hidden="true"></span>';
-              echo '<span id="fn-feedback" class="help-block"></span>';
-              echo '</div>';
+            }
+            // elseif (isset($_GET['errMsg']) && strstr($_GET['errMsg'], 'firstNameInvalidChar')) {
+            //   echo '<div class="col-md-12 col-sm-12 has-feedback has-error" id="fname-div">';
+            //   echo '<label class="control-label" for="firstname">First name:</label>';
+            //   echo '<input type="text" class="form-control" name="firstname" id="firstname" placeholder="Please enter your first name">';
+            //   echo '<span id="fn-icon" class="input-lg glyphicon form-control-feedback glyphicon-remove" aria-hidden="true"></span>';
+            //   echo '<span id="fn-feedback" class="help-block">Your First name must only be alphabetical chars and either a - or \'</span>';
+            //   echo '</div>';
+            // } 
+            else {
+              if (isset($_SESSION['firstname'])) {
+                echo '<div class="col-md-12 col-sm-12 has-feedback has-success" id="fname-div">';
+                echo '<label class="control-label" for="firstname">First name:</label>';
+                echo '<input type="text" class="form-control" name="firstname" id="firstname" placeholder="Please enter your first name" value="' . $_SESSION['firstname'] . '">';
+                echo '<span id="fn-icon" class="input-lg glyphicon form-control-feedback glyphicon-ok" aria-hidden="true"></span>';
+                echo '<span id="fn-feedback" class="help-block"></span>';
+                echo '</div>';
+              } else {
+                echo '<div class="col-md-12 col-sm-12 has-feedback" id="fname-div">';
+                echo '<label class="control-label" for="firstname">First name:</label>';
+                echo '<input type="text" class="form-control" name="firstname" id="firstname" placeholder="Please enter your first name">';
+                echo '<span id="fn-icon" class="input-lg glyphicon form-control-feedback" aria-hidden="true"></span>';
+                echo '<span id="fn-feedback" class="help-block"></span>';
+                echo '</div>';
+              }
             }
 
             if (isset($_GET['errMsg']) && strstr($_GET['errMsg'], 'lastNameNULL')) {
@@ -104,35 +127,35 @@
 
             echo '<div class="col-md-12 col-sm-12 has-feedback" id="email-div">';
             echo '<label class="control-label" for="email">Email:</label>';
-            echo '<input type="text" class="form-control" name="email" id="email" placeholder="Please enter your email" required>';
+            echo '<input type="text" class="form-control" name="email" id="email" placeholder="Please enter your email">';
             echo '<span id="email-icon" class="input-lg glyphicon form-control-feedback" aria-hidden="true"></span>';
             echo '<span id="email-feedback" class="help-block"></span>';
             echo '</div>';
 
             echo '<div class="col-md-12 col-sm-12 has-feedback" id="phone-div">';
             echo '<label class="control-label" for="phone">Phone Number:</label>';
-            echo '<input type="text" class="form-control" name="phone" id="phone" placeholder="Please enter your phone number" required>';
+            echo '<input type="text" class="form-control" name="phone" id="phone" placeholder="Please enter your phone number">';
             echo '<span id="phone-icon" class="input-lg glyphicon form-control-feedback" aria-hidden="true"></span>';
             echo '<span id="phone-feedback" class="help-block"></span>';
             echo '</div>';
 
             echo '<div class="col-md-12 col-sm-12 has-feedback" id="username-div">';
             echo '<label class="control-label" for="username">Username:</label>';
-            echo '<input type="text" class="form-control" name="username" id="username" placeholder="Please enter your a username" required>';
+            echo '<input type="text" class="form-control" name="username" id="username" placeholder="Please enter your a username">';
             echo '<span id="un-icon" class="input-lg glyphicon form-control-feedback" aria-hidden="true"></span>';
             echo '<span id="un-feedback" class="help-block"></span>';
             echo '</div>';
 
             echo '<div class="col-md-12 col-sm-12 has-feedback" id="password-div">';
             echo '<label class="control-label" for="password">Password:</label>';
-            echo '<input type="password" class="form-control" name="password" id="password" placeholder="Please enter a password" required>';
+            echo '<input type="password" class="form-control" name="password" id="password" placeholder="Please enter a password">';
             echo '<span id="pw-icon" class="input-lg glyphicon form-control-feedback" aria-hidden="true"></span>';
             echo '<span id="pw-feedback" class="help-block"></span>';
             echo '</div>';
 
             echo '<div class="col-md-12 col-sm-12" id="comments-div">';
             echo '<label class="control-label" for="comments">Comments:</label>';
-            echo '<textarea class="form-control" rows="6" placeholder="Tell us about your message" name="message" id="comments" required></textarea>';
+            echo '<textarea class="form-control" rows="6" placeholder="Tell us about your message" name="message" id="comments"></textarea>';
             echo '<span id="comments-icon" class="input-lg glyphicon form-control-feedback" aria-hidden="true"></span>';
             echo '<span id="comments-feedback" class="help-block"></span>';
             echo '</div>';
@@ -142,23 +165,42 @@
             echo '</div>';
 
             echo '</form>';
-            // }
-          ?>
-          <?php
           } else {
+            // Clear out previous errors:
             $errors = '';
-            $firstName = $_POST['firstname'];
+
+            // Clear out previous SESSION data:
+            unset($_SESSION['firstname']);
+            unset($_SESSION['lastname']);
+            unset($_SESSION['email']);
+            unset($_SESSION['phone']);
+            unset($_SESSION['username']);
+            unset($_SESSION['password']);
+            unset($_SESSION['message']);
+
+            // Set variables from POST:
+            $firstname = $_POST['firstname'];
             $lastname = $_POST['lastname'];
             $email = $_POST['email'];
             $phone = $_POST['phone'];
             $username = $_POST['username'];
             $password = $_POST['password'];
             $message = $_POST['message'];
-            if ($firstName == NULL) {
+
+            // Validate data:
+            if ($firstname == NULL) {
               $errors .= 'firstNameNULL';
+            } elseif (!preg_match('/^[a-zA-Z\'-]+$/', $firstname)) {
+              $errors .= 'firstNameInvalidChar';
+            } else {
+              $_SESSION['firstname'] = $firstname;
             }
             if ($lastname == NULL) {
               $errors .= 'lastNameNULL';
+            } elseif (!preg_match('/^[a-zA-Z\'-]+$/', $lastname)) {
+              $errors .= 'lastNameInvalidChar';
+            } else {
+              $_SESSION['lastname'] = $lastname;
             }
             if ($email == NULL) {
               $errors .= 'emailNull';
@@ -176,7 +218,7 @@
               $errors .= 'messageNULL';
             }
             if ($errors != NULL) {
-              header('Location: contact.php?errMsg=' . $errors);
+              header("Location: contact.php?errMsg=$errors");
             } else {
               echo '<h2>Hello From Results</h2>';
               echo '<p>First Name: ' . $_POST['firstname'] . '</p>';
