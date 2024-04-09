@@ -178,7 +178,7 @@
               if (strstr($_GET['errMsg'], 'phoneNULL')) {
                 echo '<span id="phone-feedback" class="help-block">Phone number cannot be blank.</span>';
               } elseif (strstr($_GET['errMsg'], 'phoneInvalid')) {
-                echo '<span id="phone-feedback" class="help-block">Phone number can only contain digits.</span>';
+                echo '<span id="phone-feedback" class="help-block">Phone number can only contain 10 digits.</span>';
               }
               echo '</div>';
             } else {
@@ -325,14 +325,14 @@
               $_SESSION['lastname'] = $lastname;
             }
             if ($email == NULL) {
-              $errors .= 'emailNull';
+              $errors .= 'emailNULL';
             } elseif (!preg_match('/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/', $email)) {
               $errors .= 'emailInvalid';
             } else {
               $_SESSION['email'] = $email;
             }
             if ($phone == NULL) {
-              $errors .= 'phoneNull';
+              $errors .= 'phoneNULL';
             } elseif (!preg_match('/^[0-9]{10}$/', $phone)) {
               $errors .= 'phoneInvalid';
             } else {
