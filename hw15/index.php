@@ -56,13 +56,13 @@
   <!-- HOME CONTENT -->
   <?php
   // Check if $page is set and send the homepage if not, otherwise set $page to what was in $_GET:
-  if (!isset($_GET['[page'])) {
+  if (!isset($_GET['page'])) {
     $page = 'home';
   } else {
     $page = $_GET['page'];
   }
 
-  // Servce the page contents depending on the $page variable:
+  // Serve the page contents depending on the $page variable:
   switch ($page) {
     case 'work':
       include('work.php');
