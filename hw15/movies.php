@@ -1,62 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>💻 Welcome to Daniel Ghrist's (kda458) Website! 💻</title>
-
-  <!-- BOOTSTRAP -->
-  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-  <link rel="stylesheet" href="assets/css/font-awesome.min.css">
-  <link rel="stylesheet" href="assets/css/owl.carousel.css">
-  <link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
-
-  <!-- MAIN CSS -->
-  <link rel="stylesheet" href="assets/css/templatemo-style.css">
-</head>
-
-
-<!-- TEMPLATE -->
-
-<body id="top" data-spy="scroll" data-target=".navbar-collapse" data-offset="50">
-
-  <!-- MENU -->
-  <section class="navbar custom-navbar navbar-fixed-top" role="navigation">
-    <div class="container">
-
-      <div class="navbar-header">
-        <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-          <span class="icon icon-bar"></span>
-          <span class="icon icon-bar"></span>
-          <span class="icon icon-bar"></span>
-        </button>
-
-        <!-- lOGO TEXT HERE -->
-        <a href="#top" class="navbar-brand">Danny's Site</a>
-      </div>
-
-      <!-- MENU LINKS -->
-      <div class="collapse navbar-collapse">
-        <ul class="nav navbar-nav navbar-nav-first">
-          <li><a href="index.html" class="smoothScroll">Home</a></li>
-          <li><a href="work.html" class="smoothScroll">Work</a></li>
-          <li><a href="school.html" class="smoothScroll">School</a></li>
-          <li><a href="hobbies.html" class="smoothScroll">Hobbies</a></li>
-          <li><a href="movies.html" class="smoothScroll">Movies</a></li>
-          <li><a href="contact.php" class="smoothScroll">Contact</a></li>
-        </ul>
-
-        <ul class="nav navbar-nav navbar-right">
-          <li><img src="assets/images/your_image.png" class="me-img" alt="Simpsonized Version of Myself"
-              title="Simpson Me"></i></li>
-        </ul>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- TESTIMONIAL -->
+  <!-- MOVIES CONTENT -->
   <section id="testimonial">
     <div class="container">
       <div class="row">
@@ -127,12 +69,3 @@
       </div>
     </div>
   </section>
-
-  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-  <!-- BootStrap 3 Javascript -->
-  <script src="assets/js/bootstrap.min.js"></script>
-
-</body>
-
-</html>

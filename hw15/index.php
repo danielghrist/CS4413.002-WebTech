@@ -39,23 +39,52 @@
       <!-- MENU LINKS -->
       <div class="collapse navbar-collapse">
         <ul class="nav navbar-nav navbar-nav-first">
-          <li><a href="index.php" class="smoothScroll">Home</a></li>
-          <li><a href="work.php" class="smoothScroll">Work</a></li>
-          <li><a href="school.php" class="smoothScroll">School</a></li>
-          <li><a href="hobbies.php" class="smoothScroll">Hobbies</a></li>
-          <li><a href="movies.php" class="smoothScroll">Movies</a></li>
+          <li><a href="index.html" class="smoothScroll">Home</a></li>
+          <li><a href="work.html" class="smoothScroll">Work</a></li>
+          <li><a href="school.html" class="smoothScroll">School</a></li>
+          <li><a href="hobbies.html" class="smoothScroll">Hobbies</a></li>
+          <li><a href="movies.html" class="smoothScroll">Movies</a></li>
           <li><a href="contact.php" class="smoothScroll">Contact</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
-          <li><img src="assets/images/your_image.png" class="me-img" alt="Simpsonized Version of Myself"
-              title="Simpson Me"></i></li>
+          <li><img src="assets/images/your_image.png" class="me-img" alt="Simpsonized Version of Myself" title="Simpson Me"></i></li>
         </ul>
       </div>
     </div>
   </section>
 
-  <!-- TESTIMONIAL -->
-  <section id="testimonial">
+  <!-- HOME CONTENT -->
+  <?php
+  // Check if $page is set and send the homepage if not, otherwise set $page to what was in $_GET:
+  if (!isset($_GET['[page'])) {
+    $page = 'home';
+  } else {
+    $page = $_GET['page'];
+  }
+
+  // Servce the page contents depending on the $page variable:
+  switch ($page) {
+    case 'work':
+      include('work.php');
+      break;
+    case 'school':
+      include'(school.php');
+      break;
+    case 'hobbies':
+      include('hobbies.php');
+      break;
+    case 'movies':
+      include('movies.php');
+      break;
+    case 'contact':
+      include('contact.php');
+      break;
+    default:
+      include('home.php');
+      break;
+  }
+  ?>
+  <!-- <section id="testimonial">
     <div class="container">
       <div class="row">
         <div class="col-md-12 col-sm-12">
@@ -122,7 +151,7 @@
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
 
   <!-- Greeting Javascript -->
   <script src="assets/js/add-content.js"></script>
