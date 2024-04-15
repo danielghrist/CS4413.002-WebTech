@@ -68,7 +68,7 @@
       include('work.php');
       break;
     case 'school':
-      include'(school.php');
+      include('school.php');
       break;
     case 'hobbies':
       include('hobbies.php');
@@ -82,7 +82,7 @@
     default:
       include('home.php');
       break;
-  }
+  };
   ?>
   <!-- <section id="testimonial">
     <div class="container">
