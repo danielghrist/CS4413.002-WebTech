@@ -305,10 +305,8 @@
               $dblink = new mysqli($host, $username, $password, $db);
 
               // Insert Query:
-              $sql = "INSERT INTO contact_info ('first_name', 'last_name', 'email', 'phone', 'username', 'password', 'comments') VALUES ('$firstname', '$lastname', '$email', '$phone', '$username', '$password', '$message')";
-              $dblink->query($sql) or
-                die('<h2>Something went wrong with: $sql<br>' . $dblink->error . '</h2>');
-
+              $sql = "INSERT INTO `contact_info` (`first_name`, `last_name`, `email`, `phone`, `username`, `password`, `comments`) VALUES ('$firstname', '$lastname', '$email', '$phone', '$username', '$password', '$message')";
+              $dblink->query($sql) or die("<h2>Something went wrong with: $sql<br>' . $dblink->error . '</h2>");
               echo '<h2>Your data has been saved successfully.</h2>';
             }
           }
