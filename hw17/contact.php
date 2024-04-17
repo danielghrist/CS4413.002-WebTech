@@ -252,7 +252,7 @@
             $phone = $_POST['phone'];
             $username = $_POST['username'];
             $password = $_POST['password'];
-            $message = $_POST['message'];
+            $message = addslashes($_POST['message']);
 
             // Validate data:
             if ($firstname == NULL) {
@@ -296,13 +296,13 @@
               header("Location: index.php?page=contact&errMsg=$errors");
             } else { // If no errors than we will send information to database:
               // Set up DB connection:
-              $username = 'webuser';
-              $password = 'A)YNQbjhwac-5vBk';
+              $dbusername = 'webuser';
+              $dbpassword = 'A)YNQbjhwac-5vBk';
               $host = 'localhost';
               $db = 'contact_data';
 
               // ODBS: Open Data Base String:
-              $dblink = new mysqli($host, $username, $password, $db);
+              $dblink = new mysqli($host, $dbusername, $dbpassword, $db);
 
               // Insert Query:
               $sql = "INSERT INTO `contact_info` (`first_name`, `last_name`, `email`, `phone`, `username`, `password`, `comments`) VALUES ('$firstname', '$lastname', '$email', '$phone', '$username', '$password', '$message')";
