@@ -246,12 +246,12 @@
             $_SESSION['message'] = "";
 
             // Set variables from POST:
-            $firstname = $_POST['firstname'];
-            $lastname = $_POST['lastname'];
-            $email = $_POST['email'];
-            $phone = $_POST['phone'];
-            $username = $_POST['username'];
-            $password = $_POST['password'];
+            $firstname = addslashes($_POST['firstname']);
+            $lastname = addslashes($_POST['lastname']);
+            $email = addslashes($_POST['email']);
+            $phone = addslashes($_POST['phone']);
+            $username = addslashes($_POST['username']);
+            $password = addslashes($_POST['password']);
             $message = addslashes($_POST['message']);
 
             // Validate data:
