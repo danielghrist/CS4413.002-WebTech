@@ -40,6 +40,11 @@ if ($page == 'contact') {
 } else {
   echo '<li><a href="index.php?page=contact" class="smoothScroll">Contact</a></li>';
 }
+if ($page == 'results') {
+  echo '<li class="active"><a href="index.php?page=results" class="smoothScroll">Contact</a></li>';
+} else {
+  echo '<li><a href="index.php?page=results" class="smoothScroll">Contact</a></li>';
+}
 
 
 echo '</ul>';

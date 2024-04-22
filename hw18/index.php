@@ -53,7 +53,7 @@
   } else {
     $page = $_GET['page'];
   }
-
+  include('functions.php');
   // Serve the page contents depending on the $page variable:
   switch ($page) {
     case 'work':
@@ -70,6 +70,9 @@
       break;
     case 'contact':
       include('contact.php');
+      break;
+    case 'results':
+      include('results.php');
       break;
     default:
       include('home.php');
