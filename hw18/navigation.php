@@ -41,9 +41,9 @@ if ($page == 'contact') {
   echo '<li><a href="index.php?page=contact" class="smoothScroll">Contact</a></li>';
 }
 if ($page == 'results') {
-  echo '<li class="active"><a href="index.php?page=results" class="smoothScroll">Contact</a></li>';
+  echo '<li class="active"><a href="index.php?page=results" class="smoothScroll">Results</a></li>';
 } else {
-  echo '<li><a href="index.php?page=results" class="smoothScroll">Contact</a></li>';
+  echo '<li><a href="index.php?page=results" class="smoothScroll">Results</a></li>';
 }
 
 
