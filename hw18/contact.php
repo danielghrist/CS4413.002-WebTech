@@ -285,15 +285,22 @@
             }
             if ($username == NULL) {
               $errors .= 'usernameNULL';
+            } else {
+              $_SESSION['username'] = $username;
             }
             if ($password == NULL) {
               $errors .= 'passwordNULL';
+            } else {
+              $_SESSION['password'] = $password;
             }
             if ($message == NULL) {
               $errors .= 'messageNULL';
+            } else {
+              $_SESSION['message'] = $message;
             }
             if ($errors != NULL) {
-              header("Location: index.php?page=contact&errMsg=$errors");
+              // header("Location: index.php?page=contact&errMsg=$errors");
+              redirect("contact.php?errMsg=$errors");
             } else { // If no errors than we will send information to database:
               // Connect to database:
               $dblink = db_connect('contact_data');
