@@ -1,4 +1,5 @@
 <?php
+include('functions.php');
 
 $dblink = db_connect('contact_data');
 $sql = "SELECT * FROM `contact_info`";
