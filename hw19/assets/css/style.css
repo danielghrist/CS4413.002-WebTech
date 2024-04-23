@@ -1,0 +1,61 @@
+/* CSS Styling */
+
+/* Begin Entire Page Styles */
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 0.95rem;
+}
+/* End Entire Page Styles */
+
+h1,
+h2 {
+  color: #0c2340;
+}
+
+table {
+  border-collapse: separate;
+  border-radius: 10px;
+  margin: 0 auto;
+  width: 75%;
+}
+
+.nav-link:link,
+.nav-link:visited {
+  color: #0c2340;
+  text-decoration: none;
+}
+
+.nav-link:hover {
+  color: #fc0;
+}
+
+/* Begin Class Styling */
+.center {
+  text-align: center;
+}
+
+.curr-page {
+  color: #ffffff;
+}
+/* End Class Styling */
+
+/* Begin Id Styling */
+#banner {
+  background-color: #f15a22;
+}
+
+#schedule {
+  background-color: #0c2340;
+  border: 2px solid #0c2340;
+}
+
+#schedule tr:nth-child(even) {
+  background-color: #f15a22;
+  color: #0c2340;
+}
+
+#schedule tr:nth-child(odd) {
+  background-color: #0c2340;
+  color: #ffffff;
+}
+/* End Id Styling */
