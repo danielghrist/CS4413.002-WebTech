@@ -1,3 +1,7 @@
+<?php
+include('functions.php');
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -53,7 +57,7 @@
   } else {
     $page = $_GET['page'];
   }
-  include('functions.php');
+
   // Serve the page contents depending on the $page variable:
   switch ($page) {
     case 'work':

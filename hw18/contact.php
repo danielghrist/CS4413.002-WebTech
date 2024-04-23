@@ -300,7 +300,7 @@
             }
             if ($errors != NULL) {
               // header("Location: index.php?page=contact&errMsg=$errors");
-              redirect("contact.php?errMsg=$errors");
+              redirect("index.php?page=contact&errMsg=$errors");
             } else { // If no errors than we will send information to database:
               // Connect to database:
               $dblink = db_connect('contact_data');
