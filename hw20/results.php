@@ -3,6 +3,14 @@
 
 <?php
 if (isset($_REQUEST['sid']) && $_REQUEST['sid'] != "") {
+  $dblink = db_connect('user_data');
+  $sid = addslashes($_REQUEST['sid']);
+  $sql = "SELECT `auto_id` FROM `accounts` WHERE `session_id`='$sid'";
+  $result = $dblink->query($sql) or die("<p>Something went wrong with $sql<p>" . $dblink->error);
+  if ($result->num_rows <= 0) {
+    redirect('index.php?page=login&errMsg=InvalidSid');
+  }
+
   echo '<table class="table table-striped">';
   echo '<thead>';
   echo '<tr>';
