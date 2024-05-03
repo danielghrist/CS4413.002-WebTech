@@ -44,7 +44,7 @@ if (isset($_POST['submit'])) {
     // $sql = "INSERT INTO `accounts` (`session_id`) VALUES('$sid') WHERE `auth_hash`='$password'";
     $sql = "UPDATE `accounts` SET `session_id`='$sid' WHERE `auth_hash`='$password'";
     $dblink->query($sql) or die('Something went wrong with $sql<br>' . $dblink->error);
-    redirect("index.php?page=resultst&sid=$sid");
+    redirect("index.php?page=results&sid=$sid");
   }
 }
 
