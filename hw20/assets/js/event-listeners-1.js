@@ -41,7 +41,7 @@ username.addEventListener(
   "blur",
   function () {
     validateCredentials(
-      6,
+      5,
       "username-div",
       "username",
       "un-feedback",
@@ -55,7 +55,7 @@ password.addEventListener(
   "blur",
   function () {
     validateCredentials(
-      6,
+      5,
       "password-div",
       "password",
       "pw-feedback",
