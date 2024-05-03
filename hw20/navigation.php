@@ -45,7 +45,16 @@ if ($page == 'results') {
 } else {
   echo '<li><a href="index.php?page=results" class="smoothScroll">Results</a></li>';
 }
-
+if ($page == 'register') {
+  echo '<li class="active"><a href="index.php?page=register" class="smoothScroll">Register</a></li>';
+} else {
+  echo '<li><a href="index.php?page=register" class="smoothScroll">Register</a></li>';
+}
+if ($page == 'login') {
+  echo '<li class="active"><a href="index.php?page=login" class="smoothScroll">Login</a></li>';
+} else {
+  echo '<li><a href="index.php?page=login" class="smoothScroll">Login</a></li>';
+}
 
 echo '</ul>';
 echo '<ul class="nav navbar-nav navbar-right">';
