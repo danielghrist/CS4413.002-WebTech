@@ -24,7 +24,7 @@ function validateCredentials(minLength, inputDiv, inputType, feedback, icon) {
       " characters long.";
 
     // Disable submit button if error:
-    document.getElementById("submit").disabled;
+    document.getElementById("submit").disabled = true;
   } else {
     credentialDiv.classList.add("has-success");
     credentialGlyphicon.classList.add("glyphicon-ok");
