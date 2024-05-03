@@ -31,7 +31,7 @@ if (!isset($_POST['submit'])) {
   echo '</form>';
 }
 if (isset($_POST['submit'])) {
-  $username = $_POST['username'];
+  $username = addslashes($_POST['username']);
   $passText = $_POST['password'];
   $salt = 'ProfessorValadezIsTheGOAT';
   $dblink = db_connect('user_data');
@@ -40,10 +40,10 @@ if (isset($_POST['submit'])) {
   $result = $dblink->query($sql) or die('Something went wrong with $sql<br>' . $dblink->error);
   if ($result->num_rows > 0) {
     $salt = microtime();
-    $sid = hash('sha256', $salt . $passText);
+    $sid = hash('sha256', $salt . $password);
     $sql = "INSERT INTO `accounts` (`session_id`) VALUES('$sid') WHERE `auth_hash`='$password'";
     $dblink->query($sql) or die('Something went wrong with $sql<br>' . $dblink->error);
-    redirect("index.php?page=contact&sid=$sid");
+    redirect("index.php?page=resultst&sid=$sid");
   }
 }
 

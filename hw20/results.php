@@ -2,19 +2,23 @@
 <script src="assets/js/jquery-3.5.1.js"></script>
 
 <?php
-echo '<table class="table table-striped">';
-echo '<thead>';
-echo '<tr>';
-echo '<th>First Name</th>';
-echo '<th>Last Name</th>';
-echo '<th>Email</th>';
-echo '<th>Phone</th>';
-echo '<th>Message</th>';
-echo '</tr>';
-echo '</thead>';
-echo '<tbody id="results">';
-echo '</tbody>';
-echo '</table>';
+if (isset($_REQUEST['sid']) && $_REQUEST['sid'] != "") {
+  echo '<table class="table table-striped">';
+  echo '<thead>';
+  echo '<tr>';
+  echo '<th>First Name</th>';
+  echo '<th>Last Name</th>';
+  echo '<th>Email</th>';
+  echo '<th>Phone</th>';
+  echo '<th>Message</th>';
+  echo '</tr>';
+  echo '</thead>';
+  echo '<tbody id="results">';
+  echo '</tbody>';
+  echo '</table>';
+} else {
+  redirect('index.php?page=login&error=NullSid');
+}
 ?>
 
 <script>
