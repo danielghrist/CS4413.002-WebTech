@@ -12,7 +12,7 @@ if (!isset($_POST['submit'])) {
   //Username:
   echo '<div class="col-md-12 col-sm-12 has-feedback" id="username-div">';
   echo '<label class="control-label" for="username">Username:</label>';
-  echo '<input type="text" class="form-control" name="username" id="username" placeholder="Please enter your a username">';
+  echo '<input type="text" class="form-control" name="username" id="username" placeholder="Please enter your a username" required>';
   echo '<span id="un-icon" class="input-lg glyphicon form-control-feedback" aria-hidden="true"></span>';
   echo '<span id="un-feedback" class="help-block"></span>';
   echo '</div>';
@@ -20,7 +20,7 @@ if (!isset($_POST['submit'])) {
   // Password
   echo '<div class="col-md-12 col-sm-12 has-feedback" id="password-div">';
   echo '<label class="control-label" for="password">Password:</label>';
-  echo '<input type="password" class="form-control" name="password" id="password" placeholder="Please enter a password">';
+  echo '<input type="password" class="form-control" name="password" id="password" placeholder="Please enter a password" required>';
   echo '<span id="pw-icon" class="input-lg glyphicon form-control-feedback" aria-hidden="true"></span>';
   echo '<span id="pw-feedback" class="help-block"></span>';
   echo '</div>';
