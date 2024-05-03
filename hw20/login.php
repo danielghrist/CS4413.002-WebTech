@@ -41,7 +41,7 @@ if (isset($_POST['submit'])) {
   if ($result->num_rows > 0) {
     $salt = microtime();
     $sid = hash('sha256', $salt . $passText);
-    $sql = "INSERT INTO `accounts` (`session_id`) VALUES ('$sid') WHERE `auth_hash`='$password'";
+    $sql = "INSERT INTO `accounts` (`session_id`) VALUES('$sid') WHERE `auth_hash`='$password'";
     $dblink->query($sql) or die('Something went wrong with $sql<br>' . $dblink->error);
     redirect("index.php?page=contact&sid=$sid");
   }
@@ -51,3 +51,7 @@ if (isset($_POST['submit'])) {
 echo '</div>';
 echo '</div>';
 echo '</section>';
+?>
+
+<!-- JavaScript for Event Listeners: -->
+<script src="assets/js/event-listeners.js"></script>

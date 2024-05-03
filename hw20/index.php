@@ -78,6 +78,12 @@ include('functions.php');
     case 'results':
       include('results.php');
       break;
+    case 'register':
+      include('register.php');
+      break;
+    case 'login':
+      include('login.php');
+      break;
     default:
       include('home.php');
       break;

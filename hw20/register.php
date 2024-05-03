@@ -29,17 +29,32 @@ if (!isset($_POST['submit'])) {
   echo '</form>';
 }
 if (isset($_POST['submit'])) {
-  $username = $_POST['username'];
+  $username = addslashes($_POST['username']);
   $passText = $_POST['password'];
   $salt = 'ProfessorValadezIsTheGOAT';
   $dblink = db_connect('user_data');
   $password = hash('sha256', $salt . $passText);
-  $sql = "Insert into `accounts` (`username`, `auth_hash`) values('$username', '$password')";
-  $dblink->query($sql) or die('Something went wrong with $sql<br>' . $dblink->error);
-  redirect('index.php?page=login');
+
+  // Check to see if user is already in the DB
+  $sqlCheck = "SELECT * FROM `user_data` WHERE `username`='$username'";
+  $result = $dblink->query($sqlCheck) or die('Something went wrong with $sql<br>' . $dblink->error);
+  if ($result->num_rows > 0) {
+    echo '<h2>This User Already Exists.</h2>';
+    redirect("index.php?page=register");
+  } else {
+    $sql = "INSERT INTO `accounts` (`username`, `auth_hash`) VALUES('$username', '$password')";
+    $dblink->query($sql) or die('Something went wrong with $sql<br>' . $dblink->error);
+    redirect('index.php?page=login');
+    echo '<h2>Successfully Registered User.</h2>';
+  }
 }
 
 
 echo '</div>';
 echo '</div>';
 echo '</section>';
+?>
+
+
+<!-- JavaScript for Event Listeners: -->
+<script src="assets/js/event-listeners.js"></script>
