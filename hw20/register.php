@@ -24,7 +24,7 @@ if (!isset($_POST['submit'])) {
   echo '</div>';
 
   // Submit Button
-  echo '<div class="col-md-4 col-sm-12">';
+  echo '<div class="col-md-4 col-sm-12 mt-3">';
   echo '<input type="submit" class="form-control" name="submit" value="Submit">';
   echo '</div>';
   echo '</form>';
@@ -40,8 +40,9 @@ if (isset($_POST['submit'])) {
   $sqlCheck = "SELECT * FROM `accounts` WHERE `username`='$username'";
   $result = $dblink->query($sqlCheck) or die('Something went wrong with $sql<br>' . $dblink->error);
   if ($result->num_rows > 0) {
-    echo '<h2>This User Already Exists.</h2>';
+
     redirect("index.php?page=register");
+    echo '<h2>This User Already Exists.</h2>';
   } else {
     $sql = "INSERT INTO `accounts` (`username`, `auth_hash`) VALUES('$username', '$password')";
     $dblink->query($sql) or die('Something went wrong with $sql<br>' . $dblink->error);

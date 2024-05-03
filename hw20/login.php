@@ -25,7 +25,7 @@ if (!isset($_POST['submit'])) {
   echo '</div>';
 
   // Submit Button
-  echo '<div class="col-md-4 col-sm-12">';
+  echo '<div class="col-md-4 col-sm-12 mt-3">';
   echo '<input type="submit" class="form-control" name="submit" value="Submit">';
   echo '</div>';
   echo '</form>';
