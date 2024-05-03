@@ -8,6 +8,14 @@ if (isset($_SESSION['error'])) {
   unset($_SESSION['error']);
 }
 
+if (isset($_GET['errMsg']) && strstr($_GET['errMsg'], 'InvalidSid')) {
+  echo '<h1>Invalid Session ID, Please Login:</h1>';
+}
+
+if (isset($_GET['errMsg']) && strstr($_GET['errMsg'], 'NullSid')) {
+  echo '<h1>Invalid Session ID, Please Login:</h1>';
+}
+
 if (!isset($_POST['submit'])) {
   echo '<h2>Please enter your login credentials:</h2>';
 
