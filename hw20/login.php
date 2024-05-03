@@ -1,4 +1,4 @@
-<?php
+<?php session_start();
 echo '<section id="contact">';
 echo '<div class="container">';
 echo '<div class="row">';
