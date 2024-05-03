@@ -5,7 +5,7 @@ echo '<div class="row">';
 
 if (isset($_SESSION['error'])) {
   echo $_SESSION['error'];
-  // unset($_SESSION['error']);
+  unset($_SESSION['error']);
 }
 
 if (!isset($_POST['submit'])) {
