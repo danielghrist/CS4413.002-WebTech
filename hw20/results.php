@@ -25,7 +25,7 @@ if (isset($_REQUEST['sid']) && $_REQUEST['sid'] != "") {
   echo '</tbody>';
   echo '</table>';
 } else {
-  redirect('index.php?page=login&error=NullSid');
+  redirect('index.php?page=login&errMsg=NullSid');
 }
 ?>
 
