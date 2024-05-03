@@ -1,5 +1,5 @@
 <?php
-echo '<section id="register">';
+echo '<section id="contact">';
 echo '<div class="container">';
 echo '<div class="row">';
 
@@ -8,7 +8,7 @@ echo '<div class="row">';
 if (!isset($_POST['submit'])) {
   echo '<h2>Please enter your registration credentials:</h2>';
 
-  echo '<form class="form-horizontal" id="register-form" role="form" action="" method="post">';
+  echo '<form class="form-horizontal" id="contact-form" role="form" action="" method="post">';
   //Username:
   echo '<div class="col-md-12 col-sm-12 has-feedback" id="username-div">';
   echo '<label class="control-label" for="username">Username:</label>';
