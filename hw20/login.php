@@ -4,6 +4,10 @@ echo '<div class="container">';
 echo '<div class="row">';
 echo '<form class="form-horizontal" id="contact-form" role="form" action="" method="post">';
 
+if (isset($_SESSION['error'])) {
+  echo $_SESSION['error'];
+  unset($_SESSION['error']);
+}
 
 if (!isset($_POST['submit'])) {
   echo '<h2>Please enter your login credentials:</h2>';
@@ -46,6 +50,7 @@ if (isset($_POST['submit'])) {
     $dblink->query($sql) or die('Something went wrong with $sql<br>' . $dblink->error);
     redirect("index.php?page=results&sid=$sid");
   } else {
+    $_SESSION['error'] = "<h1>Error: Invalid Credentials</h1>";
     redirect("index.php?page=login");
   }
 }

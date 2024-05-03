@@ -3,6 +3,10 @@ echo '<section id="contact">';
 echo '<div class="container">';
 echo '<div class="row">';
 
+if (isset($_SESSION['error'])) {
+  echo $_SESSION['error'];
+  unset($_SESSION['error']);
+}
 
 if (!isset($_POST['submit'])) {
   echo '<h2>Please enter your registration credentials:</h2>';
@@ -41,9 +45,9 @@ if (isset($_POST['submit'])) {
   $sqlCheck = "SELECT * FROM `accounts` WHERE `username`='$username'";
   $result = $dblink->query($sqlCheck) or die('Something went wrong with $sql<br>' . $dblink->error);
   if ($result->num_rows > 0) {
-
+    $_SESSION['error'] = "<h1>Error: Invalid Credentials Try Again:</h1>";
     redirect("index.php?page=register");
-    echo '<h2>This User Already Exists.</h2>';
+    // echo '<h2>This User Already Exists.</h2>';
   } else {
     $sql = "INSERT INTO `accounts` (`username`, `auth_hash`) VALUES('$username', '$password')";
     $dblink->query($sql) or die('Something went wrong with $sql<br>' . $dblink->error);
