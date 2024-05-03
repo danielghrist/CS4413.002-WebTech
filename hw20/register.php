@@ -37,7 +37,7 @@ if (isset($_POST['submit'])) {
   $password = hash('sha256', $salt . $passText);
 
   // Check to see if user is already in the DB
-  $sqlCheck = "SELECT * FROM `user_data` WHERE `username`='$username'";
+  $sqlCheck = "SELECT * FROM `accounts` WHERE `username`='$username'";
   $result = $dblink->query($sqlCheck) or die('Something went wrong with $sql<br>' . $dblink->error);
   if ($result->num_rows > 0) {
     echo '<h2>This User Already Exists.</h2>';
