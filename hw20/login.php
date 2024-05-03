@@ -6,7 +6,7 @@ echo '<form class="form-horizontal" id="contact-form" role="form" action="" meth
 
 
 if (!isset($_POST['submit'])) {
-  echo '<h2>Please enter your login credentials</h2>';
+  echo '<h2>Please enter your login credentials:</h2>';
 
   //Username:
   echo '<div class="col-md-12 col-sm-12 has-feedback has-error" id="username-div">';
