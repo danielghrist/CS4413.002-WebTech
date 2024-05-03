@@ -32,6 +32,7 @@ function validateCredentials(minLength, inputDiv, inputType, feedback, icon) {
 
     credentialDiv.classList.remove("has-error");
     credentialGlyphicon.classList.remove("glyphicon-remove");
+    document.getElementById("submit").disabled = false;
   }
 }
 
