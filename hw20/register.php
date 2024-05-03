@@ -47,7 +47,7 @@ if (isset($_POST['submit'])) {
   } else {
     $sql = "INSERT INTO `accounts` (`username`, `auth_hash`) VALUES('$username', '$password')";
     $dblink->query($sql) or die('Something went wrong with $sql<br>' . $dblink->error);
-    redirect('index.php?page=login');
+    redirect("index.php?page=login");
     echo '<h2>Successfully Registered User.</h2>';
   }
 }

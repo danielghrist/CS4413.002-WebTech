@@ -45,6 +45,8 @@ if (isset($_POST['submit'])) {
     $sql = "UPDATE `accounts` SET `session_id`='$sid' WHERE `auth_hash`='$password'";
     $dblink->query($sql) or die('Something went wrong with $sql<br>' . $dblink->error);
     redirect("index.php?page=results&sid=$sid");
+  } else {
+    redirect("index.php?page=login");
   }
 }
 
